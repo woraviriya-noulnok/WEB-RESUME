@@ -1,117 +1,240 @@
-body {
-font-family: sans-serif;
+/* --- ตั้งค่าสีและฟอนต์พื้นฐาน --- */
+:root {
+--primary-blue: #3b5773;
+--secondary-blue: #6d869f;
+--accent-yellow: #e8c88a;
+--bg-light: #f7f9fa;
+--text-dark: #333333;
+--text-light: #ffffff;
+}
+* {
 margin: 0;
 padding: 0;
-scroll-behavior: smooth;
+box-sizing: border-box;
+font-family: 'Prompt', sans-serif;
 }
-header {
+body {
+background-color: #e0e5ec;
 display: flex;
-justify-content: space-between;
+justify-content: center;
+padding: 40px 20px;
+}
+/* --- โครงสร้างหลัก (กระดาษ A4) --- */
+.resume-container {
+width: 100%;
+max-width: 900px;
+background-color: var(--bg-light);
+display: flex;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+position: relative;
+overflow: hidden;
+}
+/* ==========================================
+คอลัมน์ซ้าย (Left Column)
+========================================== */
+.left-column {
+width: 35%;
+padding: 40px 20px 0 20px;
+display: flex;
+flex-direction: column;
 align-items: center;
-padding: 15px 5%;
-background: #1a1a3d;
-color: white;
+z-index: 2;
 }
-header nav a {
-color: white;
-margin: 0 10px;
-text-decoration: none;
-}
-.hero {
-background: #eaf2fb;
-text-align: center;
-padding: 60px 20px;
-}
-.hero h1 {
-color: #1a1a3d;
-margin-bottom: 10px;
-}
-.team-photo {
-max-width: 250px;
-width: 100%;
-height: auto;
+/* รูปโปรไฟล์ */
+.profile-pic-container {
+width: 180px;
+height: 180px;
 border-radius: 50%;
-margin-top: 20px;
-margin-bottom: 10px;
-border: 4px solid #2563eb;
+border: 5px solid var(--text-light);
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+overflow: hidden;
+margin-bottom: 20px;
 }
-.cta-button {
+.profile-pic-container img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+/* ส่วนเกี่ยวกับฉัน */
+.about-box {
+background-color: var(--accent-yellow);
+border-radius: 20px;
+padding: 20px;
+text-align: center;
+margin-bottom: 30px;
+border: 2px solid var(--primary-blue);
+width: 100%;
+position: relative;
+}
+.about-box h2 {
+color: var(--primary-blue);
+font-size: 1.2rem;
+margin-bottom: 10px;
+background: var(--bg-light);
 display: inline-block;
-background: #2563eb;
-color: white;
-padding: 10px 20px;
-border-radius: 6px;
-text-decoration: none;
-margin-top: 10px;
+padding: 5px 15px;
+border-radius: 15px;
+position: absolute;
+top: -18px;
+left: 50%;
+transform: translateX(-50%);
+border: 2px solid var(--primary-blue);
 }
-.content-wrapper {
-display: flex;
-gap: 30px;
-padding: 40px 5%;
+.about-box p {
+font-size: 0.85rem;
+color: var(--text-dark);
+line-height: 1.5;
+margin-top: 15px;
 }
-main {
-flex: 3;
-display: flex;
-gap: 20px;
-flex-wrap: wrap;
-}
-.card {
-flex: 1;
-min-width: 250px;
-border: 1px solid #ddd;
-border-radius: 8px;
-padding: 15px;
-}
-aside {
-flex: 1;
-background: #f5f5f5;
-padding: 15px;
-border-radius: 8px;
-}
-footer {
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-background: #1a1a3d;
-color: white;
-padding: 30px 5%;
-gap: 20px;
-}
-.footer-col {
-flex: 1;
-min-width: 180px;
-}
-.footer-col ul {
-list-style: none;
-padding: 0;
-}
-.footer-col ul li a {
-color: white;
-text-decoration: none;
-}
-.copyright {
+/* ส่วนข้อมูลส่วนตัว & ติดต่อ (กล่องน้ำเงิน) */
+.info-box {
+background-color: var(--secondary-blue);
+border-radius: 20px 20px 0 0;
+padding: 30px 20px;
 width: 100%;
-text-align: center;
-margin-top: 20px;
-font-size: 0.85em;
+flex-grow: 1;
+color: var(--text-light);
 }
-.back-to-top {
-display: none;
-position: fixed;
-bottom: 20px;
-right: 20px;
-background: #2563eb;
-color: white;
-width: 40px;
-height: 40px;
+.info-title {
+font-size: 1.1rem;
+margin-bottom: 15px;
+display: flex;
+align-items: center;
+gap: 10px;
+border-bottom: 1px dashed rgba(255,255,255,0.5);
+padding-bottom: 5px;
+}
+.info-list {
+list-style: none;
+font-size: 0.9rem;
+margin-bottom: 25px;
+}
+.info-list li {
+margin-bottom: 10px;
+}
+/* ข้อมูลการติดต่อ */
+.contact-list {
+list-style: none;
+}
+.contact-list li {
+display: flex;
+align-items: center;
+gap: 15px;
+margin-bottom: 15px;
+font-size: 0.85rem;
+}
+.contact-icon {
+background: var(--text-light);
+color: var(--secondary-blue);
+width: 30px;
+height: 30px;
 border-radius: 50%;
-text-align: center;
-line-height: 40px;
-text-decoration: none;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-shrink: 0;
 }
+/* ==========================================
+คอลัมน์ขวา (Right Column)
+========================================== */
+.right-column {
+width: 65%;
+padding: 50px 40px 40px 30px;
+}
+/* ชื่อและตำแหน่ง */
+.header-section {
+margin-bottom: 40px;
+}
+.header-section h1 {
+color: var(--primary-blue);
+font-size: 2.5rem;
+line-height: 1.1;
+}
+.header-section h2 {
+color: var(--secondary-blue);
+font-size: 1.5rem;
+font-weight: 500;
+margin-bottom: 10px;
+}
+.job-title {
+background-color: var(--accent-yellow);
+display: inline-block;
+padding: 5px 20px;
+border-radius: 20px;
+color: var(--primary-blue);
+font-weight: 600;
+font-size: 1rem;
+}
+/* หัวข้อแต่ละ Section */
+.section-title {
+background-color: var(--primary-blue);
+color: var(--text-light);
+display: inline-block;
+padding: 8px 25px;
+border-radius: 5px 20px 20px 5px;
+font-size: 1.2rem;
+margin-bottom: 25px;
+position: relative;
+}
+/* ระบบ Timeline (ประวัติการศึกษา & ทำงาน) */
+.timeline {
+border-left: 1px dashed var(--secondary-blue);
+margin-left: 15px;
+padding-left: 25px;
+margin-bottom: 30px;
+}
+.timeline-item {
+position: relative;
+margin-bottom: 20px;
+}
+.timeline-item:last-child {
+margin-bottom: 0;
+}
+.timeline-item::before {
+content: '\f058';
+font-family: 'FontAwesome';
+position: absolute;
+left: -33px;
+top: 0px;
+color: var(--primary-blue);
+background: var(--bg-light);
+font-size: 1.2rem;
+}
+.timeline-date {
+font-weight: 700;
+color: var(--primary-blue);
+font-size: 0.95rem;
+}
+.timeline-title {
+font-weight: 600;
+color: var(--text-dark);
+margin-bottom: 5px;
+}
+.timeline-desc {
+font-size: 0.85rem;
+color: #666;
+line-height: 1.6;
+}
+/* ทักษะความสามารถ */
+.skills-list {
+padding-left: 20px;
+font-size: 0.85rem;
+color: #666;
+line-height: 1.6;
+}
+.skills-list li {
+margin-bottom: 10px;
+}
+/* Responsive สำหรับมือถือ */
 @media (max-width: 768px) {
-header { flex-direction: column; gap: 15px; }
-.content-wrapper { flex-direction: column; }
-main { flex-direction: column; }
-footer { flex-direction: column; text-align: center; }
+.resume-container {
+flex-direction: column;
+}
+.left-column, .right-column {
+width: 100%;
+}
+.info-box {
+border-radius: 20px;
+margin-bottom: 20px;
+}
 }

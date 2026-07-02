@@ -1,79 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>My Resume</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume - Adora Montminy</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- ดึงไฟล์ style.css มาใช้งาน -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<div class="logo">MyResume</div>
-<nav>
-<a href="#">About</a>
-<a href="#">Experience</a>
-<a href="#">Education</a>
-<a href="#">Portfolio</a>
-<a href="#">Contact</a>
-</nav>
-<a href="#" class="cta-button">Hire Me</a>
-</header>
-<section class="hero">
-<h1>สวัสดีครับ ผมชื่อ [ชื่อ-นามสกุล]</h1>
-<p>Web Developer ที่พร้อมเรียนรู้และสร้างสรรค์ผลงานใหม่ๆ</p>
-<img src="profile.jpg" alt="รูปโปรไฟล์" class="team-photo">
-<br>
-<a href="#" class="cta-button">ดาวน์โหลด CV</a>
-</section>
-<div class="content-wrapper">
-<main>
-<article class="card">
-<h2>ประสบการณ์ทำงาน</h2>
-<p><strong>ชื่อบริษัท (2022-ปัจจุบัน)</strong><br>พัฒนาและดูแลเว็บไซต์ของบริษัท...</p>
-<a href="#">อ่านเพิ่มเติม</a>
-</article>
-<article class="card">
-<h2>ประวัติการศึกษา</h2>
-<p><strong>มหาวิทยาลัย... (2018-2022)</strong><br>ปริญญาตรี คณะ... สาขา...</p>
-<a href="#">อ่านเพิ่มเติม</a>
-</article>
-<article class="card">
-<h2>ผลงาน (Portfolio)</h2>
-<p>สร้างระบบจัดการข้อมูลหลังบ้านด้วย HTML, CSS...</p>
-<a href="#">ดูผลงาน</a>
-</article>
-</main>
-<aside>
-<h3>ทักษะ (Skills)</h3>
-<ul>
-<li>HTML, CSS, JS</li>
-<li>Python, Java</li>
-<li>Figma, UI/UX</li>
+<div class="resume-container">
+<!-- คอลัมน์ซ้าย -->
+<div class="left-column">
+<div class="profile-pic-container">
+<img src="myprofile.jpg" alt="Profile Picture">
+</div>
+<div class="about-box">
+<h2>เกี่ยวกับฉัน</h2>
+<p>Elit in eiusmod ut esse non ea duis eiusmod laboris cupidatat excepteur dolore dolore ipsum ex laboris est inn et consectetur ex cupidatat ipsum fugiat...</p>
+</div>
+<div class="info-box">
+<h3 class="info-title"><i class="fa-solid fa-angles-right"></i> ข้อมูลส่วนตัว</h3>
+<ul class="info-list">
+<li><strong>ชื่อ - สกุล :</strong> อโดรา มอนต์มินี</li>
+<li><strong>ชื่อเล่น :</strong> มิน</li>
+<li><strong>อายุ :</strong> 25 ปี</li>
+<li><strong>วันเกิด :</strong> 3 สิงหาคม 1999</li>
+<li><strong>สัญชาติ :</strong> ไทย</li>
 </ul>
-<h3>ภาษา (Languages)</h3>
-<p>ไทย (Native)<br>อังกฤษ (Intermediate)</p>
-</aside>
-</div>
-<footer>
-<div class="footer-col">
-<h3>เกี่ยวกับฉัน</h3>
-<p>มุ่งมั่นพัฒนาตัวเองและทำงานเป็นทีมได้ดี</p>
-</div>
-<div class="footer-col">
-<h3>ลิงก์ด่วน</h3>
-<ul>
-<li><a href="#">หน้าแรก</a></li>
-<li><a href="#">ผลงาน</a></li>
-<li><a href="#">ติดต่อฉัน</a></li>
+<h3 class="info-title"><i class="fa-solid fa-angles-right"></i> ช่องทางการติดต่อ</h3>
+<ul class="contact-list">
+<li><div class="contact-icon"><i class="fa-solid fa-phone"></i></div> 123-456-7890</li>
+<li><div class="contact-icon"><i class="fa-solid fa-envelope"></i></div> hello@reallygreatsite.com</li>
+<li><div class="contact-icon"><i class="fa-solid fa-house"></i></div> 123 Anywhere St., Any City, ST12345</li>
 </ul>
 </div>
-<div class="footer-col">
-<h3>ติดต่อ</h3>
-<p>Email: email@example.com</p>
-<p>Phone: 081-234-5678</p>
 </div>
-<p class="copyright">&copy; 2026 My Resume. All rights reserved.</p>
-</footer>
-<a href="#" class="back-to-top">&uarr;</a>
+<!-- คอลัมน์ขวา -->
+<div class="right-column">
+<div class="header-section">
+<h1>อโดรา มอนต์มินี</h1>
+<h2>Adora Montminy</h2>
+<div class="job-title">Marketing / Digital Marketing</div>
+</div>
+<h3 class="section-title">ประวัติการศึกษา</h3>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-date">2018 - 2022 <span class="timeline-title">Borcelle University</span></div>
+<div class="timeline-desc">ปริญญาตรี คณะบริหารธุรกิจ สาขาการจัดการ<br>เกียรตินิยมอันดับ 1 (เกรดเฉลี่ย 3.60)</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2012 - 2018 <span class="timeline-title">Really Great High School</span></div>
+<div class="timeline-desc">สายการเรียนภาษาอังกฤษ (เกรดเฉลี่ย 3.80)</div>
+</div>
+</div>
+<h3 class="section-title">ประวัติการทำงาน</h3>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-date">2023 - 2024 <span class="timeline-title">Larana, Inc.</span></div>
+<div class="timeline-desc">Lorem cupidatat nostrud excepteur aute labore aliqua mollit reprehenderit...</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2021 - 2022 <span class="timeline-title">Elsetown Cor.</span></div>
+<div class="timeline-desc">Lorem cupidatat nostrud excepteur aute labore aliqua mollit reprehenderit...</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-date">2019 <span class="timeline-title">Studio showde Cor.</span></div>
+<div class="timeline-desc">Lorem cupidatat nostrud excepteur aute labore aliqua mollit reprehenderit...</div>
+</div>
+</div>
+<h3 class="section-title">ทักษะความสามารถ</h3>
+<ul class="skills-list">
+<li>tempor ut ea fugiat occaecat magna veniam labore amet velit ad fugiat.</li>
+<li>aliqua anim id consectetur velit minim ut consectetur eu proident.</li>
+</ul>
+</div>
+</div>
+<!-- ดึงไฟล์ script.js มาใช้งาน -->
 <script src="script.js"></script>
 </body>
 </html>

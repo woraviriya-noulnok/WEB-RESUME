@@ -1,7 +1,9 @@
-window.onscroll = function () {
-const btn = document.querySelector('.back-to-top');
-btn.style.display =
-(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)
-? 'block'
-: 'none';
-};
+// ตรวจสอบว่าไฟล์ JS ถูกโหลดและทำงานสำเร็จ
+console.log("Resume loaded successfully!");
+/* 💡 ไอเดียเพิ่มเติม: 
+ถ้าในอนาคตคุณอยากเพิ่มปุ่ม "ปริ้นท์ Resume" 
+คุณสามารถนำฟังก์ชันนี้ไปผูกกับปุ่มใน HTML ได้ครับ
+*/
+function printResume() {
+window.print();
+}
